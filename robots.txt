@@ -1,0 +1,3 @@
+# simple robots.txt, blocking all crawlers
+User-agent: *
+Disallow: /

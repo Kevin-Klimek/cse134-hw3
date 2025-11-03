@@ -1,9 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>tmp</title>
+        <meta name="author" content="Kevin Klimek"/>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
     </head>
+
     <body>
-        <h1>Temp Page for contacting me</h1>
+        <header>
+            <nav>
+                <ul>
+                    <!-- TBI: homepage in nav bar is an icon that links on click-->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html"><strong>Contact</strong></a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <!-- Have email sending intentionally require JS: many crawlers can't execute JS -->
+        <dialog open> <!-- TODO: not open on default in prod. Add button functionality to open this window and send email -->
+            <pre><code>&lt;&ndash;&ndash; Popup for email confirmation &mdash; will be hidden initally and modal when implemented with JS &ndash;&ndash;&gt;</code></pre>
+            <label for="sending">Sending:</label>
+            <progress id="sending" value="100" max="100"></progress>
+            <p>Thanks for reaching out! I'll be in touch with you shortly &hearts;</p>
+            <!-- tabindex? autofocus? put focus state inside modal when displayed -->
+            <form method="dialog">
+                <input type="submit" value="close">
+            </form>
+        </dialog>
+
+        <footer>
+            <!-- -->
+            <ol>
+                <li><img src="./assets/images/home.png" alt="Home" title="Home"/></li>
+                <li><a href="https://github.com/Kevin-Klimek" title="GitHub">GitHub</a></li>
+                <li>&copy; 2025 Kevin Klimek</li>
+            </ol>
+        </footer>
     </body>
 </html>

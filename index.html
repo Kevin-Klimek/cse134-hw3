@@ -6,6 +6,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico"/>
+
+        <!-- temp pagewide styling, will move to stylesheet -->
+        <style>
+            /* Styling parent nav. Just need it to center items */
+            nav ul {
+                display: flex;
+                flex-direction: row; /* default, but setting to potentially adjust later for mobile. Use var? And set var with @media */
+                justify-content: space-around; /* Spaces all of its children (li) with even space between them and the borders */
+                list-style-type: none; /* Removes ul bullets */
+            }
+            body {
+                background-color: #202020;
+                /* background-color: rgb(47,47,47); */
+                color: #D7DADC;
+            }
+            nav li {
+                /* border: 1px solid black; */
+                box-shadow: 0 4px 8px #0003;
+                padding: 1em 3em;
+                border-radius: 10px;
+                align-content: center;
+                transition: border 2s 500ms; /* Not working? */
+            }
+
+            /* Styles the strong element in nav bar, which is the current page we are on */
+            nav li:has( strong ) {
+                color: #9900FF;
+            }
+            /* nav li strong {
+                border: 10px solid black;
+                font-size: 32px;
+            } */
+
+            nav li:hover {
+                box-shadow: 0 0 10px rgb(105, 1, 140);
+                color: #9900FF;
+                cursor: pointer;
+                transform: scale(1.1);
+                border: 1px solid black;
+            }
+
+
+            nav a {
+                color: inherit;
+                text-decoration: inherit;
+            }
+        </style>
     </head>
 
     <body>
